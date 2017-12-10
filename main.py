@@ -1,9 +1,11 @@
 import sys
 import readchar
 
+# a: 游泳跳水 b: 羽毛球
+
 raw = []
 
-with open('a.txt', 'r') as f:
+with open('b.txt', 'r') as f:
     raw = f.readlines()
 
 
@@ -47,14 +49,14 @@ try:
             else:
                 print 'noop'
         elif userInput == 's':
-            saveFile('a_c.txt', correct)
-            saveFile('a_w.txt', wrong)
+            saveFile('b_c.txt', correct)
+            saveFile('b_w.txt', wrong)
             correct = []
             wrong = []
             print 'file saved'
         elif userInput == 'x':
-            saveFile('a_c.txt', correct)
-            saveFile('a_w.txt', wrong)
+            saveFile('b_c.txt', correct)
+            saveFile('b_w.txt', wrong)
             print 'save and exit !'
             break
         elif userInput == 'q':
@@ -66,6 +68,6 @@ try:
             formerChosen.append(userInput)
 except:
     print "Unexpected error:", sys.exc_info()[0]
-saveFile('a_c.txt', correct)
-saveFile('a_w.txt', wrong)
+saveFile('b_c.txt', correct)
+saveFile('b_w.txt', wrong)
 print 'end, save and exit !'
